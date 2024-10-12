@@ -10,7 +10,7 @@
 ```bash
 git clone https://github.com/zaer1n/nix-dotfiles.git ./nix
 sudo nixos-rebuild switch --flake ./nix
-nh home switch
+home-manager switch --flake ./nix
 ```
 
 ## Wallpapers
