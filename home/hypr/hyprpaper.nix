@@ -4,8 +4,8 @@
 		settings = {
 			splash = false;
 			ipc = false;
-			preload = [ "~/nix/wallpapers/makima_hand_gun.jpg" ];
-			wallpaper = [ ", ~/nix/wallpapers/makima_hand_gun.jpg" ];
+			preload = [ "~/nix/wallpapers/hakurei_reimu_touhou.jpg" ];
+			wallpaper = [ ", ~/nix/wallpapers/hakurei_reimu_touhou.jpg" ];
 		};
 	};
 }
