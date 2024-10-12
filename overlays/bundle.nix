@@ -1,0 +1,3 @@
+[
+  (import ./tclient-ddnet.nix)
+]
