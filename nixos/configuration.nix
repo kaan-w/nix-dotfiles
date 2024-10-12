@@ -49,13 +49,5 @@
   # Hint Electron apps to use Wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  # https://github.com/viperML/nh
-  programs.nh = {
-		enable = true;
-		clean.enable = true;
-		clean.extraArgs = "--keep-since 4d --keep 3";
-		flake = /home/zaer1n/nix;
-  };
-
   system.stateVersion = "24.05";
 }
