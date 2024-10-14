@@ -4,7 +4,22 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   # https://nixos.wiki/wiki/AMD_GPU#Make_the_kernel_use_the_correct_driver_early
-  boot.initrd.kernelModules = ["amdgpu"];
+  boot.initrd.kernelModules = [ "amdgpu" ];
+
+  hardware.graphics = {
+    enable = true;
+    extraPackages = [
+      pkgs.amdvlk
+      pkgs.rocmPackages.clr.icd
+    ];
+    extraPackages32 = [
+      pkgs.driversi686Linux.amdvlk
+    ];
+  };
+
+  # https://nixos.wiki/wiki/Bluetooth#Enabling_Bluetooth_support
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot= true;
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
@@ -22,10 +37,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;    
   };
-	
-  # https://nixos.wiki/wiki/Bluetooth#Enabling_Bluetooth_support
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot= true;
 
   users.users."zaer1n" = {
     isNormalUser = true;
