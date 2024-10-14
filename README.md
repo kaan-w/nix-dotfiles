@@ -8,9 +8,9 @@
 
 ## Installation
 ```bash
-git clone https://github.com/zaer1n/nix-dotfiles.git ./nix
-sudo nixos-rebuild switch --flake ./nix
-home-manager switch --flake ./nix
+git clone https://github.com/zaer1n/nix-dotfiles.git
+sudo nixos-rebuild switch --flake ./nix-dotfiles
+home-manager switch --flake ./nix-dotfiles
 ```
 
 ## Wallpapers

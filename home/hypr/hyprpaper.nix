@@ -4,8 +4,8 @@
 		settings = {
 			splash = false;
 			ipc = false;
-			preload = [ "~/nix/wallpapers/hakurei_reimu_touhou.jpg" ];
-			wallpaper = [ ", ~/nix/wallpapers/hakurei_reimu_touhou.jpg" ];
+			preload = [ "~/nix-dotfiles/wallpapers/hakurei_reimu_touhou.jpg" ];
+			wallpaper = [ ", ~/nix-dotfiles/wallpapers/hakurei_reimu_touhou.jpg" ];
 		};
 	};
 }
