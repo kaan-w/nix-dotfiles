@@ -1,0 +1,21 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "strict": true,
+        "target": "ES2023",
+        "moduleResolution": "Bundler",
+        // "checkJs": true,
+        // "allowJs": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "/home/zaer1n/.local/share/ags/src/jsx",
+        "paths": {
+            "astal": [
+                "/home/zaer1n/.local/share/ags"
+            ],
+            "astal/*": [
+                "/home/zaer1n/.local/share/ags/src/*"
+            ]
+        },
+    }
+}

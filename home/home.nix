@@ -26,6 +26,7 @@
 			inputs.self.packages.${system}.audiorelay
 			inputs.zen-browser.packages.${system}.specific
 			inputs.self.packages.${system}.linux-wallpaperengine
+			inputs.ags.packages.${pkgs.system}.astal
 		];
 		pointerCursor = {	
 			name = "Bibata-Modern-Ice";

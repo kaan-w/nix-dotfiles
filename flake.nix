@@ -9,6 +9,10 @@
 			url = "github:hyprwm/Hyprland";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		ags = {
+			url = "github:aylur/ags/v2";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 		zen-browser = {
 			url = "github:ch4og/zen-browser-flake";
 			inputs.nixpkgs.follows = "nixpkgs";
