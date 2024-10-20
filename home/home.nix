@@ -3,6 +3,7 @@
 		./programs/bundle.nix
 		./hypr/bundle.nix
 		./gtk.nix
+		./vesktop.nix
 	];
 
 	programs.home-manager.enable = true;
