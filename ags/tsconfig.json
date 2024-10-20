@@ -8,13 +8,13 @@
         // "checkJs": true,
         // "allowJs": true,
         "jsx": "react-jsx",
-        "jsxImportSource": "/home/zaer1n/.local/share/ags/src/jsx",
+        "jsxImportSource": "/home/zaer1n/.local/share/ags/gtk3",
         "paths": {
             "astal": [
                 "/home/zaer1n/.local/share/ags"
             ],
             "astal/*": [
-                "/home/zaer1n/.local/share/ags/src/*"
+                "/home/zaer1n/.local/share/ags/*"
             ]
         },
     }
