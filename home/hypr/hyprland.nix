@@ -8,7 +8,7 @@
         "HYPRCURSOR_SIZE, 24"
 			];
 	
-			monitor = ", 1920x1080@144, 0x0, 1";
+			monitor = ", highrr, auto, 1";
 			
 			general = {
 				gaps_in = 5;
