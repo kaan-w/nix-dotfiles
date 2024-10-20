@@ -4,6 +4,9 @@
     extensions = with pkgs.vscode-extensions; [
       jnoortheen.nix-ide
       pkief.material-icon-theme
+      rust-lang.rust-analyzer
+      golang.go
+      vscodevim.vim
     ] ++ [
       inputs.self.packages.${system}.vscode-moegi-theme
     ];
