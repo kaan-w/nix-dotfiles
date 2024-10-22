@@ -15,6 +15,7 @@
       "explorer.compactFolders" = false;
       "workbench.iconTheme" = "material-icon-theme";
       "workbench.colorTheme" = "Moegi Dark Vitesse";
+      "window.titleBarStyle" = "custom";
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
       "nix.serverSettings" = {
