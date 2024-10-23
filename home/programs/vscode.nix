@@ -17,11 +17,19 @@
       "workbench.colorTheme" = "Moegi Dark Vitesse";
       "window.titleBarStyle" = "custom";
       "nix.enableLanguageServer" = true;
-      "nix.serverPath" = "nil";
+      "nix.serverPath" = "nixd";
       "nix.serverSettings" = {
-        "nil" = {
-          "diagnostics" = {
-            "ignored" = [ "unused_binding" "unused_with" ];
+        "nixd" = {
+          "nixpkgs" = {
+            "expr" = "import <nixpkgs> {}";
+          };
+          "options" = {
+            "nixos" = {
+              "expr" = "(builtins.getFlake \"github:zaer1n/nix-dotfiles\").nixosConfigurations.nixos.options";
+            };
+            "home-manager" = {
+              "expr" = "(builtins.getFlake \"github:zaer1n/nix-dotfiles\").homeConfigurations.zaer1n.options";
+            };
           };
         };
       };

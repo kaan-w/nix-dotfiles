@@ -22,7 +22,7 @@
 			pkgs.pwvucontrol
 			pkgs.hyprshot
 			pkgs.vesktop
-			pkgs.nil
+			pkgs.nixd
 			inputs.self.packages.${system}.audiorelay
 			inputs.zen-browser.packages.${system}.specific
 			inputs.self.packages.${system}.linux-wallpaperengine
