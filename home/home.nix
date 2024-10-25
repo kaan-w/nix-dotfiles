@@ -1,10 +1,5 @@
-{ config, pkgs, inputs, system, ... }: {
-	imports = [
-		./programs/bundle.nix
-		./hypr/bundle.nix
-		./gtk.nix
-		./vesktop.nix
-	];
+{ config, lib, pkgs, inputs, system, ... }: {
+	imports = lib.lists.remove ./home.nix (lib.filesystem.listFilesRecursive ./.);
 
 	programs.home-manager.enable = true;
 	home = {

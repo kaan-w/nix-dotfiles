@@ -1,3 +1,4 @@
+# https://github.com/NixOS/nixpkgs/pull/348336/files
 {
   lib,
   stdenv,

@@ -21,13 +21,17 @@
 	outputs = { self, nixpkgs, home-manager, ... }@inputs:
 		let
 			system = "x86_64-linux";
+			inherit (nixpkgs.lib) filesystem;
 			pkgs = import nixpkgs {
 				inherit system;
-				overlays = import ./overlays/bundle.nix; 
+				overlays = builtins.map (x: import x) (filesystem.listFilesRecursive ./overlays);
 				config.allowUnfree = true;
 			};
 		in {
-		packages.${system} = pkgs.callPackage ./pkgs/bundle.nix {};
+		packages.${system} = filesystem.packagesFromDirectoryRecursive { 
+			inherit (pkgs) callPackage;
+			directory = ./pkgs; 
+		};
 		nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
 			inherit system;
 			specialArgs = { inherit inputs; inherit system; };
