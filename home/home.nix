@@ -1,6 +1,4 @@
-{ config, lib, pkgs, inputs, system, ... }: {
-	imports = lib.lists.remove ./home.nix (lib.filesystem.listFilesRecursive ./.);
-
+{ config, pkgs, inputs, system, ... }: {
 	programs.home-manager.enable = true;
 	home = {
 		username = "zaer1n";
