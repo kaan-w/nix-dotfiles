@@ -42,6 +42,9 @@
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
   };
+
+  # https://nixos.wiki/wiki/Command_Shell#For_all_users
+  users.defaultUserShell = pkgs.zsh;
   
   time.timeZone = "Europe/Istanbul";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -60,6 +63,9 @@
   programs.hyprland.enable = true;
   # Hint Electron apps to use Wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  # https://nixos.wiki/wiki/Command_Shell#Enable
+  programs.zsh.enable = true;
 
   # https://nixos.wiki/wiki/Steam#Install
   programs.steam = {
