@@ -7,7 +7,6 @@
 			pkgs.cargo
 			pkgs.rustc
 			pkgs.gcc
-			pkgs.tclient-ddnet
 			pkgs.spotify
 			pkgs.python3
 			pkgs.nautilus
@@ -18,6 +17,7 @@
 			pkgs.nixd
 			pkgs.adwaita-icon-theme
 			pkgs.obsidian
+			pkgs.taterclient-ddnet
 			inputs.self.packages.${system}.audiorelay
 			inputs.zen-browser.packages.${system}.specific
 			inputs.self.packages.${system}.linux-wallpaperengine

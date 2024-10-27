@@ -24,7 +24,7 @@
 			inherit (nixpkgs.lib) filesystem strings;
 			pkgs = import nixpkgs {
 				inherit system;
-				overlays = builtins.map (x: import x) (filesystem.listFilesRecursive ./overlays);
+				# overlays = builtins.map (x: import x) (filesystem.listFilesRecursive ./overlays);
 				config.allowUnfree = true;
 			};
 		in {
