@@ -19,6 +19,7 @@
 			pkgs.vesktop
 			pkgs.nixd
 			pkgs.adwaita-icon-theme
+			pkgs.obsidian
 			inputs.self.packages.${system}.audiorelay
 			inputs.zen-browser.packages.${system}.specific
 			inputs.self.packages.${system}.linux-wallpaperengine
