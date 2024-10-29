@@ -4,11 +4,7 @@
 		username = "zaer1n";
 		homeDirectory = /home/zaer1n;
 		packages = [
-			pkgs.cargo
-			pkgs.rustc
-			pkgs.gcc
 			pkgs.spotify
-			pkgs.python3
 			pkgs.nautilus
 			pkgs.overskride
 			pkgs.pwvucontrol
@@ -18,6 +14,8 @@
 			pkgs.adwaita-icon-theme
 			pkgs.obsidian
 			pkgs.taterclient-ddnet
+			pkgs.direnv
+			pkgs.devenv
 			inputs.self.packages.${system}.audiorelay
 			inputs.zen-browser.packages.${system}.specific
 			inputs.self.packages.${system}.linux-wallpaperengine

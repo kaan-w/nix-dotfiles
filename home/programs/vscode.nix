@@ -7,6 +7,7 @@
       rust-lang.rust-analyzer
       golang.go
       vscodevim.vim
+      mkhl.direnv
     ] ++ [
       inputs.self.packages.${system}.vscode-moegi-theme
     ];
