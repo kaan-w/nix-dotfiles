@@ -5,6 +5,14 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    shellAliases = let 
+      flakeDir = "~/nix-dotfiles"; 
+    in {
+      nrs = "sudo nixos-rebuild switch --flake ${flakeDir}";
+      hms = "home-manager switch --flake ${flakeDir}";
+      ff = "fastfetch";
+    };
+
     history = {
       size = 5000;
       ignoreAllDups = true;
