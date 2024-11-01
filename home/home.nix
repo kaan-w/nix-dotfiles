@@ -6,6 +6,9 @@
 		packages = [
 			pkgs.spotify
 			pkgs.nautilus
+			pkgs.gthumb
+			pkgs.baobab
+			pkgs.dialect
 			pkgs.overskride
 			pkgs.pwvucontrol
 			pkgs.hyprshot
