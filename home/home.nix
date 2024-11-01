@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, system, ... }: {
+{ pkgs, inputs, system, ... }: {
 	programs.home-manager.enable = true;
 	home = {
 		username = "zaer1n";
