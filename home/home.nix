@@ -17,7 +17,6 @@
 			pkgs.adwaita-icon-theme
 			pkgs.obsidian
 			pkgs.taterclient-ddnet
-			pkgs.direnv
 			pkgs.devenv
 			inputs.self.packages.${system}.audiorelay
 			inputs.zen-browser.packages.${system}.specific

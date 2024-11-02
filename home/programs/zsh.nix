@@ -18,9 +18,5 @@
       ignoreAllDups = true;
       path = "${config.xdg.dataHome}/zsh/zsh_history";
     };
-
-    initExtra = ''
-      eval "$(direnv hook zsh)"
-    '';
   };
 }
