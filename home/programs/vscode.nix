@@ -8,6 +8,8 @@
       golang.go
       vscodevim.vim
       mkhl.direnv
+      github.vscode-github-actions
+      tamasfe.even-better-toml
     ] ++ [
       inputs.self.packages.${system}.vscode-moegi-theme
     ];
