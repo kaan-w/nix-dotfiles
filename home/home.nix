@@ -18,9 +18,9 @@
 			pkgs.obsidian
 			pkgs.taterclient-ddnet
 			pkgs.devenv
+			pkgs.linux-wallpaperengine
 			inputs.self.packages.${system}.audiorelay
 			inputs.zen-browser.packages.${system}.specific
-			inputs.self.packages.${system}.linux-wallpaperengine
 		];
 		pointerCursor = {	
 			name = "Bibata-Modern-Ice";
@@ -30,7 +30,7 @@
 		};		
 		stateVersion = "24.05";
 	};
-
+	
 	# Temporary
 	programs.rofi.enable = true;
 }
