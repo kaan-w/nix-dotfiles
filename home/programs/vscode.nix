@@ -10,6 +10,8 @@
       mkhl.direnv
       github.vscode-github-actions
       tamasfe.even-better-toml
+      unifiedjs.vscode-mdx
+      astro-build.astro-vscode
     ] ++ [
       inputs.self.packages.${system}.vscode-moegi-theme
     ];
