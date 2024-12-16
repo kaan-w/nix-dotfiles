@@ -6,10 +6,10 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = let 
-      flakeDir = "~/nix-dotfiles"; 
+      flake = "~/nix-dotfiles"; 
     in {
-      nrs = "sudo nixos-rebuild switch --flake ${flakeDir}";
-      hms = "home-manager switch --flake ${flakeDir}";
+      nrs = "sudo nixos-rebuild switch --flake ${flake}";
+      hms = "home-manager switch --flake ${flake}";
       ff = "fastfetch";
     };
 
