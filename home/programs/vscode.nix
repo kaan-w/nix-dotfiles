@@ -22,6 +22,7 @@
       "workbench.iconTheme" = "material-icon-theme";
       "workbench.colorTheme" = "Moegi Dark Vitesse";
       "window.titleBarStyle" = "custom";
+      "vim.disableExtension" = true;
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nixd";
       "nix.serverSettings" = {
