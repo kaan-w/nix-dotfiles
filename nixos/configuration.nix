@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, user, ... }: {
   imports = [ ./hardware-configuration.nix ];
 
   boot.loader.systemd-boot.enable = true;
@@ -38,7 +38,7 @@
     pulse.enable = true;    
   };
 
-  users.users."zaer1n" = {
+  users.users.${user} = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
   };

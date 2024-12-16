@@ -23,6 +23,7 @@
 				# overlays = builtins.map (x: import x) (filesystem.listFilesRecursive ./overlays);
 				config.allowUnfree = true;
 			};
+			user = "zaer1n";
 		in {
 		packages.${system} = filesystem.packagesFromDirectoryRecursive { 
 			inherit (pkgs) callPackage;
@@ -30,14 +31,14 @@
 		};
 		nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
 			inherit system;
-			specialArgs = { inherit inputs; inherit system; };
+			specialArgs = { inherit inputs system user; };
 			modules = [
 				./nixos/configuration.nix 
 			];
 		};
 		homeConfigurations."zaer1n" = home-manager.lib.homeManagerConfiguration {
 			inherit pkgs;
-			extraSpecialArgs = { inherit inputs; inherit system; };
+			extraSpecialArgs = { inherit inputs system user; };
 			modules = builtins.filter (file: strings.hasSuffix ".nix" file) (filesystem.listFilesRecursive ./home);
 		};
 	};

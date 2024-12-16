@@ -1,8 +1,8 @@
-{ pkgs, inputs, system, ... }: {
+{ pkgs, inputs, system, user, ... }: {
 	programs.home-manager.enable = true;
 	home = {
-		username = "zaer1n";
-		homeDirectory = /home/zaer1n;
+		username = user;
+		homeDirectory = /home/${user};
 		packages = [
 			pkgs.spotify
 			pkgs.nautilus
@@ -27,9 +27,9 @@
 			package = pkgs.bibata-cursors;
 			size = 24;
 			gtk.enable = true;
-		};		
+		};	
 		stateVersion = "24.05";
-	};
+	};	
 	
 	# Temporary
 	programs.rofi.enable = true;
