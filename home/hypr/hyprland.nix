@@ -64,7 +64,7 @@
 			};
 			
 			input = {
-				kb_layout = "us";
+				kb_layout = "us,tr";
 				follow_mouse = 1;
 				sensitivity = 0;
 			};
@@ -88,6 +88,7 @@
 				"$mod, up, movefocus, u"
 				"$mod, down, movefocus, d"
 				"$mod, S, exec, hyprshot -m region" # (!)
+				"$mod, space, exec, hyprctl switchxkblayout all next"
 			] ++ (
 				builtins.concatLists (builtins.genList (i:
 					let ws = i + 1;
