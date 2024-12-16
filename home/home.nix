@@ -22,15 +22,9 @@
 			inputs.self.packages.${system}.audiorelay
 			inputs.zen-browser.packages.${system}.specific
 		];
-		pointerCursor = {	
-			name = "Bibata-Modern-Ice";
-			package = pkgs.bibata-cursors;
-			size = 24;
-			gtk.enable = true;
-		};	
 		stateVersion = "24.05";
-	};	
-	
+	};
+
 	# Temporary
 	programs.rofi.enable = true;
 }

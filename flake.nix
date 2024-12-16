@@ -5,6 +5,10 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		stylix = {
+			url = "github:danth/stylix";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 		hyprland = {
 			url = "github:hyprwm/Hyprland";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +21,7 @@
 	outputs = { self, nixpkgs, home-manager, ... }@inputs:
 		let
 			system = "x86_64-linux";
-			inherit (nixpkgs.lib) filesystem strings;
+			inherit (nixpkgs.lib) filesystem;
 			pkgs = import nixpkgs {
 				inherit system;
 				# overlays = builtins.map (x: import x) (filesystem.listFilesRecursive ./overlays);
@@ -39,7 +43,9 @@
 		homeConfigurations."zaer1n" = home-manager.lib.homeManagerConfiguration {
 			inherit pkgs;
 			extraSpecialArgs = { inherit inputs system user; };
-			modules = builtins.filter (file: strings.hasSuffix ".nix" file) (filesystem.listFilesRecursive ./home);
+			modules = (filesystem.listFilesRecursive ./home) ++ [
+				inputs.stylix.homeManagerModules.stylix
+			];
 		};
 	};
 }
