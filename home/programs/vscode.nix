@@ -23,6 +23,7 @@
       "workbench.colorTheme" = "Moegi Dark Vitesse";
       "window.titleBarStyle" = "custom";
       "vim.disableExtension" = true;
+      "rust-analyzer.inlayHints.parameterHints.enable" = false;
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nixd";
       "nix.serverSettings" = {
