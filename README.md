@@ -7,7 +7,7 @@
 
 ## Installation
 > [!IMPORTANT]
-> You will also need to generate a new `hardware-configuration.nix` file by running the command `nixos-generate-config`
+> You will also need to [generate](https://nixos.wiki/wiki/Nixos-generate-config) a new `hardware-configuration.nix` file.
 ```bash
 git clone https://github.com/zaer1n/nix-dotfiles.git
 sudo nixos-rebuild switch --flake ./nix-dotfiles
