@@ -12,6 +12,7 @@
       tamasfe.even-better-toml
       unifiedjs.vscode-mdx
       astro-build.astro-vscode
+      ms-python.python
     ] ++ [
       inputs.self.packages.${system}.vscode-moegi-theme
     ];
