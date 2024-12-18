@@ -1,4 +1,7 @@
-{ lib, vscode-utils }:
+{
+  lib,
+  vscode-utils,
+}:
 vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
     name = "moegi-theme";

@@ -1,9 +1,13 @@
-{ inputs, system, ... }: {
+{
+  inputs,
+  system,
+  ...
+}: {
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
   ];
 
-  programs.spicetify = let 
+  programs.spicetify = let
     spicetify-pkgs = inputs.spicetify-nix.legacyPackages.${system};
   in {
     enable = true;

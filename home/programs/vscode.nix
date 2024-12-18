@@ -1,21 +1,28 @@
-{ pkgs, inputs, system, ... }: {
+{
+  pkgs,
+  inputs,
+  system,
+  ...
+}: {
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [
-      jnoortheen.nix-ide
-      pkief.material-icon-theme
-      rust-lang.rust-analyzer
-      golang.go
-      vscodevim.vim
-      mkhl.direnv
-      github.vscode-github-actions
-      tamasfe.even-better-toml
-      unifiedjs.vscode-mdx
-      astro-build.astro-vscode
-      ms-python.python
-    ] ++ [
-      inputs.self.packages.${system}.vscode-moegi-theme
-    ];
+    extensions = with pkgs.vscode-extensions;
+      [
+        jnoortheen.nix-ide
+        pkief.material-icon-theme
+        rust-lang.rust-analyzer
+        golang.go
+        vscodevim.vim
+        mkhl.direnv
+        github.vscode-github-actions
+        tamasfe.even-better-toml
+        unifiedjs.vscode-mdx
+        astro-build.astro-vscode
+        ms-python.python
+      ]
+      ++ [
+        inputs.self.packages.${system}.vscode-moegi-theme
+      ];
     userSettings = {
       "editor.minimap.enabled" = false;
       "explorer.compactFolders" = false;
@@ -28,6 +35,9 @@
       "nix.serverPath" = "nixd";
       "nix.serverSettings" = {
         "nixd" = {
+          "formatting" = {
+            "command" = ["alejandra"];
+          };
           "nixpkgs" = {
             "expr" = "import <nixpkgs> {}";
           };
@@ -40,6 +50,11 @@
             };
           };
         };
+      };
+      "[nix]" = {
+        "editor.defaultFormatter" = "jnoortheen.nix-ide";
+        "editor.formatOnPaste" = true;
+        "editor.formatOnSave" = true;
       };
     };
   };

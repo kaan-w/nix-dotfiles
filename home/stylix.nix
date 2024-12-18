@@ -1,12 +1,16 @@
-{ pkgs, config, ... }: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   stylix = {
     enable = true;
     image = pkgs.fetchurl (builtins.elemAt (import ../wallpapers.nix) 3);
     polarity = "dark";
     cursor = {
       name = "Bibata-Modern-Ice";
-	  	package = pkgs.bibata-cursors;
-	  	size = 24;
+      package = pkgs.bibata-cursors;
+      size = 24;
     };
     targets = {
       gtk.extraCss = ''
@@ -16,6 +20,6 @@
       vscode.enable = false;
       vesktop.enable = false;
       spicetify.enable = false;
-    };    
-  };  
+    };
+  };
 }

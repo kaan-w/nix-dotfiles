@@ -1,10 +1,15 @@
-{ pkgs, inputs, user, ... }: {
-  imports = [ ./hardware-configuration.nix ];
+{
+  pkgs,
+  inputs,
+  user,
+  ...
+}: {
+  imports = [./hardware-configuration.nix];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   # https://nixos.wiki/wiki/AMD_GPU#Make_the_kernel_use_the_correct_driver_early
-  boot.initrd.kernelModules = [ "amdgpu" ];
+  boot.initrd.kernelModules = ["amdgpu"];
 
   hardware.graphics = {
     enable = true;
@@ -19,12 +24,12 @@
 
   # https://nixos.wiki/wiki/Bluetooth#Enabling_Bluetooth_support
   hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot= true;
+  hardware.bluetooth.powerOnBoot = true;
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
   # AudioRelay uses ports 59100 for server discovery, 59200 for audio transport. (Local Server -> PC)
-  networking.firewall.allowedUDPPorts = [ 59100 59200 ];
+  networking.firewall.allowedUDPPorts = [59100 59200];
 
   # Auto mount/unmount drives
   services.gvfs.enable = true;
@@ -35,22 +40,22 @@
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-    pulse.enable = true;    
+    pulse.enable = true;
   };
 
   users.users.${user} = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
   };
 
   # https://nixos.wiki/wiki/Command_Shell#For_all_users
   users.defaultUserShell = pkgs.zsh;
-  
+
   time.timeZone = "Europe/Istanbul";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = [

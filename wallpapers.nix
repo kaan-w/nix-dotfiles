@@ -1,4 +1,4 @@
-# index -> wallhaven wallpaper tags 
+# index -> wallhaven wallpaper tags
 [
   # 0 -> flowers, text, noise, short hair, closed eyes, side view, simple background, hoods
   {
