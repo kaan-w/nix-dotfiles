@@ -44,7 +44,7 @@
 				./nixos/configuration.nix 
 			];
 		};
-		homeConfigurations."zaer1n" = home-manager.lib.homeManagerConfiguration {
+		homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
 			inherit pkgs;
 			extraSpecialArgs = { inherit inputs system user; };
 			modules = (filesystem.listFilesRecursive ./home) ++ [
