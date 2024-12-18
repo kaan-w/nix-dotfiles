@@ -4,7 +4,6 @@
 		username = user;
 		homeDirectory = /home/${user};
 		packages = [
-			pkgs.spotify
 			pkgs.nautilus
 			pkgs.gthumb
 			pkgs.baobab

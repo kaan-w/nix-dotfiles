@@ -11,6 +11,7 @@
     targets = {
       vscode.enable = false;
       vesktop.enable = false;
+      spicetify.enable = false;
     };    
   };  
 }
