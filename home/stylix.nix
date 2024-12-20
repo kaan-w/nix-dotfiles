@@ -12,6 +12,11 @@
       package = pkgs.bibata-cursors;
       size = 24;
     };
+    iconTheme = {
+      enable = true;
+      dark = "MoreWaita";
+      package = pkgs.morewaita-icon-theme;
+    };
     targets = {
       gtk.extraCss = ''
         @define-color sidebar_bg_color #${config.stylix.base16Scheme.base00};
