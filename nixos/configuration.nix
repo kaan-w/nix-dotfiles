@@ -13,13 +13,7 @@
 
   hardware.graphics = {
     enable = true;
-    extraPackages = [
-      pkgs.amdvlk
-      pkgs.rocmPackages.clr.icd
-    ];
-    extraPackages32 = [
-      pkgs.driversi686Linux.amdvlk
-    ];
+    enable32Bit = true;
   };
 
   # https://nixos.wiki/wiki/Bluetooth#Enabling_Bluetooth_support
