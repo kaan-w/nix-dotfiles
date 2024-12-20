@@ -33,7 +33,7 @@
       inputs.self.packages.${system}.audiorelay
       inputs.zen-browser.packages.${system}.specific
     ];
-    stateVersion = "24.05";
+    stateVersion = "25.05";
   };
 
   programs.fastfetch.enable = true;
