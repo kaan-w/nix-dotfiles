@@ -13,7 +13,6 @@
       pkgs.nautilus
       pkgs.gthumb
       pkgs.baobab
-      pkgs.dialect
       pkgs.overskride
       pkgs.pwvucontrol
       pkgs.hyprshot
@@ -24,14 +23,13 @@
       pkgs.taterclient-ddnet
       pkgs.devenv
       pkgs.protonvpn-gui
-      pkgs.bottles
       pkgs.adwsteamgtk
       pkgs.pulseaudio
       pkgs.tty-clock
       pkgs.linux-wallpaperengine
       inputs.ghostty.packages.${system}.default
       inputs.self.packages.${system}.audiorelay
-      inputs.zen-browser.packages.${system}.specific
+      inputs.zen-browser.packages.${system}.default
     ];
     stateVersion = "25.05";
   };
