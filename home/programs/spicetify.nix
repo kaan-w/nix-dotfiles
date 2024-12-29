@@ -15,7 +15,6 @@
       fullScreen
       betterGenres
       volumePercentage
-      sectionMarker
     ];
     enabledCustomApps = with spicetify-pkgs.apps; [
       lyricsPlus
