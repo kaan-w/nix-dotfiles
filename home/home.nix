@@ -17,7 +17,6 @@
       pkgs.overskride
       pkgs.pwvucontrol
       pkgs.hyprshot
-      pkgs.vesktop
       pkgs.nixd
       pkgs.alejandra
       pkgs.adwaita-icon-theme
