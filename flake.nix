@@ -51,11 +51,7 @@
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = {inherit inputs system user;};
-      modules =
-        (filesystem.listFilesRecursive ./home)
-        ++ [
-          inputs.stylix.homeManagerModules.stylix
-        ];
+      modules = filesystem.listFilesRecursive ./home;
     };
   };
 }

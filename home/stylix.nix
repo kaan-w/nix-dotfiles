@@ -1,8 +1,13 @@
 {
   pkgs,
+  inputs,
   config,
   ...
 }: {
+  imports = [
+    inputs.stylix.homeManagerModules.stylix
+  ];
+
   stylix = {
     enable = true;
     image = pkgs.fetchurl (builtins.elemAt (import ../wallpapers.nix) 3);
