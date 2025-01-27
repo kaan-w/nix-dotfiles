@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  system,
   user,
   ...
 }: {
@@ -54,6 +55,7 @@
 
   environment.systemPackages = [
     pkgs.home-manager
+    inputs.anyrun.packages.${system}.anyrun
     pkgs.vim
     pkgs.tree
   ];

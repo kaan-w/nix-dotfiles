@@ -78,7 +78,7 @@
         [
           "$mod, Q, exec, kitty"
           "$mod, E, exec, nautilus"
-          "$mod, R, exec, rofi -show drun"
+          "$mod, R, exec, anyrun"
           "$mod, C, killactive,"
           "$mod, M, exit,"
           "$mod, V, togglefloating,"

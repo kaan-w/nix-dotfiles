@@ -13,6 +13,10 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    anyrun = {
+      url = "github:anyrun-org/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     ghostty.url = "github:ghostty-org/ghostty";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
