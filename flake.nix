@@ -9,10 +9,6 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     anyrun = {
       url = "github:anyrun-org/anyrun";
       inputs.nixpkgs.follows = "nixpkgs";
