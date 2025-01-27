@@ -74,5 +74,5 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "25.05";
 }
