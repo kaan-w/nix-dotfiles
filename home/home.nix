@@ -27,7 +27,6 @@
       pkgs.pulseaudio
       pkgs.tty-clock
       pkgs.linux-wallpaperengine
-      inputs.ghostty.packages.${system}.default
       inputs.self.packages.${system}.audiorelay
       inputs.zen-browser.packages.${system}.default
     ];
