@@ -23,11 +23,27 @@
             name = "iCloud Mail";
             url = "https://icloud.com/mail/";
           }
+          {
+            name = "Tuta Mail";
+            url = "https://mail.tutanota.com";
+          }
+          {
+            name = "Reddit";
+            url = "https://reddit.com/";
+          }
+          {
+            name = "Technopat Sosyal";
+            url = "https://technopat.net/sosyal/";
+          }
         ];
       }
       {
         name = "Tools";
         bookmarks = [
+          {
+            name = "ChatGPT";
+            url = "https://chatgpt.com";
+          }
           {
             name = "Excalidraw";
             url = "https://excalidraw.com/";
@@ -60,10 +76,6 @@
           {
             name = "Arch";
             url = "https://wiki.archlinux.org";
-          }
-          {
-            name = "Vicinae";
-            url = "https://docs.vicinae.com/";
           }
           {
             name = "Spicetify-nix";
@@ -142,6 +154,10 @@
           {
             name = "Home Manager Manual";
             url = "https://home-manager.dev/manual/unstable/";
+          }
+          {
+            name = "Nix User Repositories";
+            url = "https://nur.nix-community.org/";
           }
           {
             name = "Nix Package Versions";
