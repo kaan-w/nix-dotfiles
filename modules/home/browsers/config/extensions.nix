@@ -13,5 +13,7 @@
     istilldontcareaboutcookies
     unpaywall
     violentmonkey
+    proton-pass
+    windscribe
   ];
 }
