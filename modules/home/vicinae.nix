@@ -1,7 +1,6 @@
-{ pkgs, inputs, ... }: {
+{ inputs, ... }: {
   imports = [
     inputs.vicinae.homeManagerModules.default
-    inputs.vicinae-extensions.homeManagerModules.default
   ];
 
   services.vicinae = {
@@ -20,9 +19,5 @@
         rounding = 10;
       };
     };
-
-    extensions = with inputs.vicinae-extensions.packages.${pkgs.system}; [
-      powermenu
-    ];
   };
 }
