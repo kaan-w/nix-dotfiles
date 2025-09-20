@@ -17,6 +17,7 @@
     finder = {
       NewWindowTarget = "Home";
       FXPreferredViewStyle = "Nlsv";
+      FXEnableExtensionChangeWarning = false;
       ShowPathbar = true;
       CreateDesktop = false;
       QuitMenuItem = true;
