@@ -17,6 +17,9 @@
     "Super+BracketLeft".action = consume-or-expel-window-left;
     "Super+BracketRight".action = consume-or-expel-window-right;
 
+    "Super+Minus".action = set-column-width "-10%";
+    "Super+Equal".action = set-column-width "+10%";
+
     "Super+WheelScrollDown" = {
       action = focus-workspace-down;
       cooldown-ms = 150;
