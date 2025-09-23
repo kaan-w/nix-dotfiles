@@ -19,7 +19,7 @@
   homebrew = {
     enable = true;
     brews = [ "cava" ];
-    casks = [ "zen" ];
+    casks = [ "zen" "proton-pass" ];
 
     # https://nix-darwin.github.io/nix-darwin/manual/index.html#opt-homebrew.onActivation.cleanup
     onActivation.cleanup = "zap";

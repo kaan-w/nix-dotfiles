@@ -42,6 +42,7 @@
     cloc
     obs-studio
     gthumb
+    proton-pass
     (ente-auth.overrideAttrs (f: p: {
       desktopItems = [(
         (builtins.elemAt p.desktopItems 0).override { 
