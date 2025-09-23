@@ -14,7 +14,7 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/38e5e2e9-aeb6-4656-9b6c-b70f4ebd9c73";
+    device = "/dev/disk/by-id/nvme-Samsung_SSD_970_EVO_Plus_500GB_S4EVNX0T468156F-part2";
     fsType = "ext4";
   };
 
