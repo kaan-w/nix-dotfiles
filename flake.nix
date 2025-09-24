@@ -49,7 +49,7 @@
   };
 
   outputs = inputs@{ nixpkgs, flake-parts, ... }: let
-    user = "kaan-w";
+    user = "kaanw";
   in
     flake-parts.lib.mkFlake { inherit inputs; } {
       flake = {
