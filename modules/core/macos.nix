@@ -37,6 +37,11 @@
       BatteryShowPercentage = true;
     };
 
+    loginwindow = {
+      GuestEnabled = false;
+      DisableConsoleAccess = true;
+    };
+
     NSGlobalDomain = {
       AppleInterfaceStyle = "Dark";
       AppleShowAllExtensions = true;
