@@ -33,6 +33,9 @@
   # Don't show the Zen welcome screen
   "zen.welcome-screen.seen" = true;
 
+  # Open bookmarks in a new tab
+  "browser.tabs.loadBookmarksInTabs" = true;
+
   # Disable telemetry
   "toolkit.telemetry.unified" = false;
   "toolkit.telemetry.enabled" = false;
