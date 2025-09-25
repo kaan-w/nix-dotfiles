@@ -8,14 +8,20 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "uas" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-id/nvme-Samsung_SSD_970_EVO_Plus_500GB_S4EVNX0T468156F-part2";
+    device = "/dev/disk/by-id/usb-Samsung_SSD_970_EVO_Plus_01293805B143-0:0-part2";
     fsType = "ext4";
+  };
+
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-id/usb-Samsung_SSD_970_EVO_Plus_01293805B143-0:0-part1";
+    fsType = "vfat";
+    options = [ "fmask=0077" "dmask=0077" ];
   };
 
   swapDevices = [ ];
