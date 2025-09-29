@@ -19,10 +19,12 @@
   homebrew = {
     enable = true;
     brews = [ "cava" ];
-    casks = [ "zen" "proton-pass" ];
-    masApps = {
-      "ExcalidrawZ" = 6636493997;
-    };
+    casks = [
+      "zen"
+      "proton-pass"
+      "ente-auth"
+      "excalidrawz"
+    ];
 
     # https://nix-darwin.github.io/nix-darwin/manual/index.html#opt-homebrew.onActivation.cleanup
     onActivation.cleanup = "zap";
