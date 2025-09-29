@@ -1,6 +1,7 @@
 { lib, pkgs, inputs, user, ... }: {
   imports = [
     ../../modules/home/browsers/zen.nix
+    ../../modules/home/browsers/firefox.nix
 
     ../../modules/home/cmd/fastfetch.nix
     ../../modules/home/cmd/bat.nix
@@ -24,6 +25,7 @@
     devenv
     gemini-cli
     notion-app
+    mas
     inputs.self.packages.${system}.lncrawl
   ];
 
