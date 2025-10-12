@@ -15,7 +15,7 @@
       tamasfe.even-better-toml
       unifiedjs.vscode-mdx
       astro-build.astro-vscode
-      ms-python.vscode-pylance
+      ms-python.python
       ms-vscode.cpptools-extension-pack
       bierner.github-markdown-preview
       inputs.self.packages.${pkgs.system}.vscode-moegi-theme
