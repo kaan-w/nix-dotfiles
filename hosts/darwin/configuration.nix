@@ -1,10 +1,8 @@
 { config, lib, inputs, user, ... }: {
   imports = [
     ../../modules/core/macos.nix
+    ../../modules/core/nix.nix
   ];
-
-  # Necessary for using flakes on this system
-  nix.settings.experimental-features = ["nix-command flakes"];
 
   # The platform the configuration will be used on
   nixpkgs.hostPlatform = "aarch64-darwin";

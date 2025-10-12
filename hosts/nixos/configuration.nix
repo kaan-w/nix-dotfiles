@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
 
     ../../modules/core/uwsm.nix
+    ../../modules/core/nix.nix
     
     inputs.niri.nixosModules.niri
   ];
@@ -59,7 +60,6 @@
   time.timeZone = "Europe/Istanbul";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
   
   nixpkgs.config.allowUnfree = true;
