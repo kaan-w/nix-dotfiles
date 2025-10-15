@@ -22,7 +22,11 @@
       "proton-pass"
       "ente-auth"
       "excalidrawz"
+      "aldente"
     ];
+    masApps = {
+      "TestFlight" = 899247664;
+    };
 
     # https://nix-darwin.github.io/nix-darwin/manual/index.html#opt-homebrew.onActivation.cleanup
     onActivation.cleanup = "zap";
