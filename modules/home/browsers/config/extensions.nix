@@ -15,5 +15,6 @@
     violentmonkey
     proton-pass
     windscribe
+    videospeed
   ];
 }
