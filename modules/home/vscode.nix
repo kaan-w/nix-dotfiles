@@ -18,6 +18,7 @@
       ms-python.python
       ms-vscode.cpptools-extension-pack
       bierner.github-markdown-preview
+      ziglang.vscode-zig
       inputs.self.packages.${pkgs.system}.vscode-moegi-theme
       inputs.self.packages.${pkgs.system}.vscode-image-preview
     ];
@@ -35,6 +36,7 @@
       "markdown-preview-github-styles.colorTheme" = "light";
       "python.languageServer" = "Pylance";      
       "rust-analyzer.inlayHints.parameterHints.enable" = false;
+      "zig.zls.enabled" = "on";
       "gutterpreview.showImagePreviewOnGutter" = false;
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nixd";
