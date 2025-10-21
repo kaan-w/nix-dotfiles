@@ -27,9 +27,6 @@
   "signon.rememberSignons" = false;
   "signon.autofillForms" = false;
 
-  # Switch tabs by scrolling
-  "toolkit.tabbox.switchByScrolling" = true;
-
   # Don't show the Zen welcome screen
   "zen.welcome-screen.seen" = true;
 
