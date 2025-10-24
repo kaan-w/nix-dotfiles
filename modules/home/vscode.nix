@@ -19,6 +19,7 @@
       ms-vscode.cpptools-extension-pack
       bierner.github-markdown-preview
       ziglang.vscode-zig
+      inputs.self.packages.${pkgs.system}.vscode-pdf    
       inputs.self.packages.${pkgs.system}.vscode-moegi-theme
       inputs.self.packages.${pkgs.system}.vscode-image-preview
     ];
