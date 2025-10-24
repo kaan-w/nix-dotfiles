@@ -38,7 +38,7 @@
         }
         {
           type = "title";
-          format = "{#keys}│ {#34} {#37}{#1}{user-name}@{host-name}{#} {#keys}│";
+          format = "{#keys}│ {#34} {#37}{#1}${user}@${host}{#} {#keys}│";
         }
         {
           key = "├───────────┬${extension}╯";
