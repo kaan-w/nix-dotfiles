@@ -51,66 +51,68 @@
   outputs = inputs@{ nixpkgs, flake-parts, ... }: let
     user = "kaanw";
   in
-    flake-parts.lib.mkFlake { inherit inputs; } {
+    flake-parts.lib.mkFlake { inherit inputs; } ({ withSystem, ... }: {
       flake = {
         templates = builtins.mapAttrs
-          (name: _: {path = ./templates/${name};})
+          (name: _: { path = ./templates/${name}; })
           (builtins.readDir ./templates);
 
-        nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux"; 
-          specialArgs = { 
-            inherit inputs user; 
-            host = "nixos"; 
-          };
-          modules = [
-            ./hosts/nixos/configuration.nix
-            inputs.home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.${user} = ./hosts/nixos/home.nix;
-              home-manager.extraSpecialArgs = { 
-                inherit inputs user;
-                host = "nixos";
-              };
-            }
-          ];
-        };
-
-        darwinConfigurations."darwin" = inputs.nix-darwin.lib.darwinSystem {
-          system = "aarch64-darwin";
-          specialArgs = {
-            inherit inputs user;
-            host = "darwin";
-          };
-          modules = [
-            ./hosts/darwin/configuration.nix
-            inputs.home-manager.darwinModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.${user} = ./hosts/darwin/home.nix;
-              home-manager.extraSpecialArgs = { 
-                inherit inputs user;
-                host = "darwin";
-              };
-            }
-            inputs.nix-homebrew.darwinModules.nix-homebrew
-            {
-              nix-homebrew = {
-                enable = true;
-                enableRosetta = true;
-                inherit user;
-                taps = {
-                  "homebrew/homebrew-core" = inputs.homebrew-core;
-                  "homebrew/homebrew-cask" = inputs.homebrew-cask;
+        nixosConfigurations."nixos" = withSystem "x86_64-linux"
+          ({ self', ... }: nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux"; 
+            specialArgs = { 
+              inherit inputs self' user; 
+              host = "nixos"; 
+            };
+            modules = [
+              ./hosts/nixos/configuration.nix
+              inputs.home-manager.nixosModules.home-manager
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.users.${user} = ./hosts/nixos/home.nix;
+                home-manager.extraSpecialArgs = { 
+                  inherit inputs self' user;
+                  host = "nixos";
                 };
-                mutableTaps = false;
-              };
-            }
-          ];
-        };
+              }
+            ];
+        });
+
+        darwinConfigurations."darwin" = withSystem "aarch64-darwin" 
+          ({ self', ... }: inputs.nix-darwin.lib.darwinSystem {
+            system = "aarch64-darwin";
+            specialArgs = {
+              inherit inputs self' user;
+              host = "darwin";
+            };
+            modules = [
+              ./hosts/darwin/configuration.nix
+              inputs.home-manager.darwinModules.home-manager
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.users.${user} = ./hosts/darwin/home.nix;
+                home-manager.extraSpecialArgs = { 
+                  inherit inputs self' user;
+                  host = "darwin";
+                };
+              }
+              inputs.nix-homebrew.darwinModules.nix-homebrew
+              {
+                nix-homebrew = {
+                  enable = true;
+                  enableRosetta = true;
+                  inherit user;
+                  taps = {
+                    "homebrew/homebrew-core" = inputs.homebrew-core;
+                    "homebrew/homebrew-cask" = inputs.homebrew-cask;
+                  };
+                  mutableTaps = false;
+                };
+              }
+            ];
+        });
       };
 
       systems = import inputs.systems;
@@ -121,5 +123,5 @@
           directory = ./packages;
         };
       };
-    };
+    });
 }

@@ -1,6 +1,6 @@
 {
   pkgs,
-  inputs,
+  self',
   ...
 }: {
   programs.vscode = {
@@ -19,9 +19,9 @@
       ms-vscode.cpptools-extension-pack
       bierner.github-markdown-preview
       ziglang.vscode-zig
-      inputs.self.packages.${pkgs.system}.vscode-pdf    
-      inputs.self.packages.${pkgs.system}.vscode-moegi-theme
-      inputs.self.packages.${pkgs.system}.vscode-image-preview
+      self'.packages.vscode-pdf    
+      self'.packages.vscode-moegi-theme
+      self'.packages.vscode-image-preview
     ];
     profiles.default.userSettings = {
       "workbench.colorTheme" = "Moegi Dark Vitesse";

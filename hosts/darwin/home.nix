@@ -1,4 +1,4 @@
-{ lib, pkgs, inputs, user, ... }: {
+{ lib, pkgs, self', user, ... }: {
   imports = [
     ../../modules/home/browsers/zen.nix
     ../../modules/home/browsers/firefox.nix
@@ -26,7 +26,7 @@
     gemini-cli
     notion-app
     mas
-    inputs.self.packages.${system}.lncrawl
+    self'.packages.lncrawl
   ];
 
   programs.fd.enable = true;

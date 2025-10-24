@@ -35,7 +35,7 @@
     hyprshot
     gemini-cli
     nur.repos.slaier.audiorelay
-    inputs.self.packages.${system}.lncrawl
+    self'.packages.lncrawl
     taterclient-ddnet
     wireguard-tools
     nix-prefetch
