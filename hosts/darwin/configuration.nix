@@ -26,6 +26,7 @@
     ];
     masApps = {
       "TestFlight" = 899247664;
+      "Xcode" = 497799835;
     };
 
     # https://nix-darwin.github.io/nix-darwin/manual/index.html#opt-homebrew.onActivation.cleanup
