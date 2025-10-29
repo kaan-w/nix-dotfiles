@@ -23,6 +23,7 @@
       "ente-auth"
       "excalidrawz"
       "aldente"
+      "istat-menus"
     ];
     masApps = {
       "TestFlight" = 899247664;
