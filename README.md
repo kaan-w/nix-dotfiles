@@ -1,2 +1,74 @@
-## Niri Showcase
-![2025-09-15 16-31-13(3)](https://github.com/user-attachments/assets/5a45ec15-e795-4523-9d91-d23830796e66)
+# ❄️ nix-dotfiles
+  
+![NixOS](https://img.shields.io/badge/NixOS-2a2630.svg?style=flat&logo=nixos&logoColor=%23CAD3F5)
+![MacOS](https://img.shields.io/badge/MacOS-2a2630?style=flat&logo=apple&logoColor=CAD3F5)
+![nixpkgs](https://img.shields.io/badge/nixpkgs-unstable-informational?style=flat&logo=nixos&logoColor=%23CAD3F5&labelColor=%232a2630&color=%2346397f)
+
+## 🎉 Installation
+<details open>
+<summary><strong>NixOS</strong></summary>
+  
+```sh
+nix-shell -p git
+git clone https://github.com/kaan-w/nix-dotfiles.git
+sudo nixos-rebuild switch --flake ./nix-dotfiles
+```
+</details>
+<details open>
+<summary><strong>MacOS</strong></summary>
+  
+```sh
+curl -fsSL https://install.determinate.systems/nix | sh -s -- install
+xcode-select --install
+softwareupdate --install-rosetta --agree-to-license
+git clone https://github.com/kaan-w/nix-dotfiles.git
+sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ./nix-dotfiles
+```
+</details>
+
+## 📑 Cheatsheet
+Showing an overview of the flake outputs:
+```sh
+nix flake show github:kaan-w/nix-dotfiles
+```
+Rebuilding the system using `nh` with the chosen hostname:
+```sh
+nh darwin switch -H darwin
+```
+Counting the total lines of nix code:
+```sh
+find . -name '*.nix' | xargs wc -l | tail -n 1
+```
+
+## 📦 Packages
+Running the packages directly:
+```sh
+nix run github:kaan-w/nixdotfiles#<name>
+```
+Using the packages from the flake outputs:
+1. Add this flake to your inputs:
+```nix
+{
+  inputs = {
+    kaanw-dotfiles = {
+      url = "github:kaan-w/nix-dotfiles";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+}
+```
+2. Use the packages:
+```nix
+{ inputs, ... }: {
+  environment.systemPackages = [
+    inputs.kaanw-dotfiles.packages.<system>.<name>
+  ];
+}
+```
+
+## 📜 Templates
+Devshell templates for `rust`, `zig` and `python` are available.  
+Initializing one of these templates:
+```sh
+nix flake init -t github:kaan-w/nix-dotfiles#<name>
+```
