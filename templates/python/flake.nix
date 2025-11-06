@@ -12,10 +12,7 @@
         devShells.default = pkgs.mkShellNoCC {
           buildInputs = with pkgs; [
             python3
-            (pkgs.python3.withPackages (pp: with pp; [
-              pandas
-              requests
-            ]))
+            # (pkgs.python3.withPackages (pp: with pp; [ ]))
           ];
         };
       };
