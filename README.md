@@ -4,7 +4,7 @@
 ![MacOS](https://img.shields.io/badge/MacOS-2a2630?style=flat&logo=apple&logoColor=CAD3F5)
 ![nixpkgs](https://img.shields.io/badge/nixpkgs-unstable-informational?style=flat&logo=nixos&logoColor=%23CAD3F5&labelColor=%232a2630&color=%2346397f)
 
-## 🎉 Installation
+## Installation
 <details open>
 <summary><strong>NixOS</strong></summary>
   
@@ -26,21 +26,7 @@ sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake ./nix-dotfiles
 ```
 </details>
 
-## 📑 Cheatsheet
-Showing an overview of the flake outputs:
-```sh
-nix flake show github:kaan-w/nix-dotfiles
-```
-Rebuilding the system using `nh` with the chosen hostname:
-```sh
-nh darwin switch -H darwin
-```
-Counting the total lines of nix code:
-```sh
-find . -name '*.nix' | xargs wc -l | tail -n 1
-```
-
-## 📦 Packages
+## Packages
 Running the packages directly:
 ```sh
 nix run github:kaan-w/nixdotfiles#<name>
@@ -48,14 +34,12 @@ nix run github:kaan-w/nixdotfiles#<name>
 Using the packages from the flake outputs:
 1. Add this flake to your inputs:
 ```nix
-{
-  inputs = {
-    kaanw-dotfiles = {
-      url = "github:kaan-w/nix-dotfiles";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+inputs = {
+  kaanw-dotfiles = {
+    url = "github:kaan-w/nix-dotfiles";
+    inputs.nixpkgs.follows = "nixpkgs";
   };
-}
+};
 ```
 2. Use the packages:
 ```nix
@@ -66,9 +50,8 @@ Using the packages from the flake outputs:
 }
 ```
 
-## 📜 Templates
-Devshell templates for `rust`, `zig` and `python` are available.  
-Initializing one of these templates:
+## Templates
+Devshell templates for `rust`, `python`, `zig` are available. Initializing one of these templates:
 ```sh
 nix flake init -t github:kaan-w/nix-dotfiles#<name>
 ```
