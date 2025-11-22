@@ -7,7 +7,7 @@
     enable = true;
     image = pkgs.fetchurl (builtins.elemAt (import ../../assets/wallpapers.nix) 12);
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/vesper.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/grayscale-dark.yaml";
 
     cursor = lib.mkIf pkgs.stdenv.isLinux {
       name = "Bibata-Modern-Ice";
@@ -42,6 +42,7 @@
       zen-browser.enable = false;
       firefox.enable = false;
       spicetify.enable = false;
+      nvf.plugin = "mini-base16";
     };
   };
 }

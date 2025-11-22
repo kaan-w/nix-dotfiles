@@ -12,7 +12,9 @@
     ../../modules/home/cmd/starship.nix
     ../../modules/home/cmd/nh.nix
 
-    ../../modules/home/vscode.nix
+    ../../modules/home/editors/vscode.nix
+    ../../modules/home/editors/nvf.nix
+
     ../../modules/home/ghostty.nix
     ../../modules/home/stylix.nix
   ];
